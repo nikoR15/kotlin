@@ -1,0 +1,108 @@
+1. Introducción a las estructuras de datos en Kotlin
+a. ¿Qué son las estructuras de datos y para qué se utilizan?
+R/: las estructuras de datos son aquellas que nos permiten, como desarrolladores, organizar la información de manera eficiente, y en definitiva diseñar la solución correcta para un determinado problema.
+b. Ventajas de utilizar estructuras de datos en Kotlin
+R/: estas son unas de las ventajas que tiene kotlin: 
+interoperabilidad con codigo java, curva de aprendizaje facil, tiempo de progamacion reducido, desarrollo multiplataforma, flexibilidad.
+c. Diferencias entre las estructuras de datos en Kotlin y Java
+
+
+2. Arreglos en Kotlin
+a. ¿Qué es un arreglo?
+R/: se emplean para almacenar multiples valores en una sola variable, frente a las variables que sólo pueden almacenar un valor
+b. Creación de arreglos en Kotlin
+R/: var arreglo:Array<String>= arrayOf("Pedro","Andres");
+    var arreglo= arrayOf<Double>(1.5,2.0,3.8);
+    var arreglo= arrayOf("pepe","andres",3,6);
+    var arreglo: Array<String> = Array(5,(i -> ""))
+    var arreglo = IntArray(3);
+c. Accediendo a los elementos de un arreglo
+R/: println(arreglo[0])
+    println(arreglo[1])
+d. Modificando los elementos de un arreglo
+R/: arreglo[2] = "rodrigo"
+    arreglo.remove("rodrigo") 
+e. Recorriendo un arreglo
+R/: for(i in arreglo){
+    println(i)
+}
+f. Funciones útiles para trabajar con arreglos en Kotlin
+R/: arrayOf(), size, get(), set()
+
+
+3. Listas en Kotlin
+a. ¿Qué es una lista?
+R/: Es una colección de elementos con un orden específico. Hay dos tipos de listas: Lista Inmutable: no se puede modificar después de su creación(listOf, setOf). Lista mutable: MutableList se puede modificar después de su creación(mutableListOf,arrayListOf,mutableSetOf)
+b. Creación de listas en Kotlin
+R/: Inmutables: var list= listOf(2,4,6,8)
+    Mutable: var list= mutableListOf(2,4,6,8)
+c. Accediendo a los elementos de una lista
+R/:println(list[0])
+d. Modificando los elementos de una lista
+R/: list.add()
+    list.remove()
+    list.removeAt()
+e. Recorriendo una lista
+R/: for(i in arreglo){
+    println(i)
+}
+f. Funciones útiles para trabajar con listas en Kotlin
+R/:add, remove, get, contains, lisOf, mutableListOf
+
+
+4. Conjuntos en Kotlin
+a. ¿Qué es un conjunto?
+R/:Un conjunto (Set) es una colección sin orden de elementos únicos, esto es, no puede tener ningún duplicado. Set extiende de la interfaz Collection, por lo que es inmutable, y no agrega nuevos métodos
+b. Creación de conjuntos en Kotlin
+R/: var numeros: MutableSet<String> = mutableSetOf<String>();
+c. Accediendo a los elementos de un conjunto
+R/: con el println(i) y la posicion que descea      
+d. Modificando los elementos de un conjunto
+R/: numeros.add("uno")
+    numeros.add("dos")
+    numeros.add("dos")
+    numeros.add("cuatro")
+e. Recorriendo un conjunto
+R/: for (i in numeros) {
+    println(i);     
+    }
+f. Funciones útiles para trabajar con conjuntos en Kotlin
+R/:add, remove, contains, setOf, mutableSetOf
+
+5. Mapas en Kotlin
+a. ¿Qué es un mapa?
+R/:Los mapas asocian claves con valores. Las claves deben ser únicas, pero los valores asociados no. De este modo, cada valor puede ser usado para identificar de manera única el valor asociado, ya que el mapa asegura que no puedes duplicar claves en la colección. Internamente, Kotlin usa la colección Java Map para implementar los mapas.
+b. Creación de mapas en Kotlin
+R/: val userSettings: Map<Int, String> = mapOf(
+        1 to "Catrina",
+        2 to "Los vargas",
+        3 to "Perros criollos",
+        4 to "FMS"
+    )
+c. Accediendo a los elementos de un mapa
+R/: con el println(i) y la posicion que descea
+d. Modificando los elementos de un mapa
+R/:no se pueden modificar los elementos de el mapa
+e. Recorriendo un mapa
+R/: if("Español" in userSettings.values){
+        println("funciona")
+    }else{
+        println("no funciona")
+    }
+f. Funciones útiles para trabajar con mapas en Kotlin
+R/:put, get, mapOf, mutableMapOf
+
+6. Pares en Kotlin
+a. ¿Qué es un par?
+R/:Los data class Pair son una estructura que permite guardar dos valores.
+b. Creación de pares en Kotlin
+R/: var pair = "Kotlin Pair" to 2
+c. Accediendo a los elementos de un par
+R/:println(pair.first)
+println(pair.second)
+d. Modificando los elementos de un par
+R/:No se puede modificar los elementos de un par
+e. Recorriendo un par
+R/:los pares se puede recorrer con un for, pero no es obligatorio
+f. Funciones útiles para trabajar con pares en Kotlin
+R/:first y second, to(), toList()
